@@ -497,6 +497,93 @@
     .layer .body { font-size: 13.5px; font-weight: 650; color: var(--ink); }
     .layer .body span { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-top: 2px; }
 
+    /* Spec & cost detail */
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 0; }
+    .spec-table th, .spec-table td {
+      padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    .spec-table th {
+      background: transparent; color: var(--muted);
+      font-size: 11px; font-weight: 800; letter-spacing: 0.04em;
+      text-transform: uppercase; width: 34%;
+    }
+    .spec-table td { color: var(--ink-soft); font-weight: 550; }
+    .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: none; }
+    .spec-table .hl { color: var(--brand-deep); font-weight: 750; }
+    .spec-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .spec-head h3 { margin: 0; font-size: 1.05rem; }
+    .pill-tag {
+      font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px;
+      letter-spacing: 0.03em;
+    }
+    .pill-a { background: rgba(107,63,160,0.12); color: var(--brand-deep); }
+    .pill-b { background: #e0e7ff; color: #3730a3; }
+    .pill-capex { background: #fef3c7; color: #92400e; }
+    .pill-opex { background: var(--ok-bg); color: var(--ok); }
+
+    .cost-matrix { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 640px; }
+    .cost-matrix th {
+      background: linear-gradient(135deg, var(--brand-deep), var(--brand));
+      color: #fff; padding: 12px 14px; font-weight: 700; text-align: left;
+    }
+    .cost-matrix td {
+      padding: 11px 14px; border-bottom: 1px solid var(--line);
+      color: var(--ink-soft); font-weight: 550; vertical-align: top;
+    }
+    .cost-matrix tr:nth-child(even) td { background: rgba(237,228,245,0.35); }
+    .cost-matrix .num { font-weight: 800; color: var(--ink); white-space: nowrap; }
+    .cost-matrix .sum td { background: rgba(107,63,160,0.08); font-weight: 750; color: var(--ink); border-bottom: none; }
+    .cost-matrix .sum .num { color: var(--brand-deep); font-size: 14px; }
+
+    .tco-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;
+    }
+    .tco-card {
+      border-radius: 16px; padding: 18px 16px; text-align: center;
+      background: rgba(255,255,255,0.7); border: 1px solid var(--line);
+    }
+    .tco-card .period { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; }
+    .tco-card .vals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+    .tco-card .v-box { padding: 10px 8px; border-radius: 12px; }
+    .tco-card .v-box.a { background: rgba(107,63,160,0.1); }
+    .tco-card .v-box.b { background: rgba(99,102,241,0.1); }
+    .tco-card .v-label { font-size: 10px; font-weight: 750; color: var(--muted); }
+    .tco-card .v-amt { font-size: 15px; font-weight: 800; color: var(--ink); margin-top: 2px; letter-spacing: -0.02em; }
+    .tco-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; font-weight: 500; }
+
+    .tco-bars { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+    .tco-row .lbl {
+      display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 700;
+      margin-bottom: 6px; color: var(--ink);
+    }
+    .tco-track {
+      height: 36px; border-radius: 12px; background: rgba(107,63,160,0.07);
+      display: flex; overflow: hidden; position: relative;
+    }
+    .tco-seg {
+      height: 100%; display: flex; align-items: center; justify-content: center;
+      font-size: 10.5px; font-weight: 750; color: #fff; min-width: 0;
+    }
+    .tco-seg.capex { background: linear-gradient(90deg, #f59e0b, #d97706); }
+    .tco-seg.opex { background: linear-gradient(90deg, var(--brand-mid), var(--brand-deep)); }
+    .tco-seg.opex-b { background: linear-gradient(90deg, #2dd4bf, #0d9488); }
+    .tco-legend {
+      display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+      margin-top: 14px; font-size: 12px; font-weight: 650; color: var(--muted);
+    }
+    .tco-legend i {
+      display: inline-block; width: 10px; height: 10px; border-radius: 3px;
+      margin-right: 6px; vertical-align: middle;
+    }
+
+    @media (max-width: 900px) {
+      .tco-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 900px) {
       .grid-2, .grid-3, .grid-4, .sec-list { grid-template-columns: 1fr; }
       .hero { padding: 32px 24px; }
@@ -528,6 +615,8 @@
         <a href="#data">데이터</a>
         <a href="#diagrams">도표</a>
         <a href="#plans">Plan A/B</a>
+        <a href="#hw">HW 스펙</a>
+        <a href="#cost">비용</a>
         <a href="#arch">아키텍처</a>
         <a href="#compare">비교</a>
         <a href="#security">보안</a>
@@ -718,23 +807,24 @@
         </div>
 
         <div class="glass viz">
-          <div class="viz-title">예상 월 운영비 비교 (초기)</div>
+          <div class="viz-title">비용 성격 비교 (한눈에)</div>
           <div class="cost-bars">
             <div class="cost-item">
-              <div class="name"><span>Plan A · 클라우드 월 비용</span><span>₩8~25만</span></div>
-              <div class="cost-bar-wrap"><div class="cost-bar a">managed</div></div>
+              <div class="name"><span>Plan A · 매월 고정+사용량</span><span>₩12~22만/월</span></div>
+              <div class="cost-bar-wrap"><div class="cost-bar a">OPEX only</div></div>
             </div>
             <div class="cost-item">
-              <div class="name"><span>Plan B · 초기 장비 (1회)</span><span>₩80~150만</span></div>
-              <div class="cost-bar-wrap"><div class="cost-bar b-init">CAPEX</div></div>
+              <div class="name"><span>Plan B · 초기 장비 (1회 CAPEX)</span><span>₩95~160만</span></div>
+              <div class="cost-bar-wrap"><div class="cost-bar b-init">1회</div></div>
             </div>
             <div class="cost-item">
-              <div class="name"><span>Plan B · 월 운영 (전기+백업)</span><span>₩2~8만</span></div>
+              <div class="name"><span>Plan B · 매월 운영</span><span>₩3~8만/월</span></div>
               <div class="cost-bar-wrap"><div class="cost-bar b-month">OPEX</div></div>
             </div>
           </div>
           <p style="margin-top:16px;font-size:12.5px;color:var(--muted);text-align:center;font-weight:500">
-            ※ 대략 상대 비교용. 실제 견적·트래픽에 따라 달라집니다.
+            상세 스펙·항목별 금액은 아래 <a href="#hw" style="color:var(--brand);font-weight:750">HW 스펙</a> ·
+            <a href="#cost" style="color:var(--brand);font-weight:750">비용 비교</a> 참고
           </p>
         </div>
       </div>
@@ -926,9 +1016,9 @@
             <div class="cons"><h4>단점</h4><ul><li>월 비용 발생</li><li>벤더 종속 일부</li></ul></div>
           </div>
           <div class="plan-cost">
-            <div class="label">예상 월 비용 (초기)</div>
-            <div class="amount">₩8만 ~ ₩25만</div>
-            <div class="note">소형 VM + 관리형 PG + 오브젝트 소량 기준</div>
+            <div class="label">초기 ≈ 0 · 매월 OPEX</div>
+            <div class="amount">월 ₩12만 ~ ₩22만</div>
+            <div class="note">표준 스펙 기준 (상세 → <a href="#cost" style="color:var(--brand);font-weight:700">비용</a>)</div>
           </div>
         </article>
 
@@ -950,18 +1040,433 @@
             <div class="cons"><h4>단점</h4><ul><li>HW 장애 직접 대응</li><li>패치·모니터링 직접</li><li>초기 장비비</li></ul></div>
           </div>
           <div class="plan-cost">
-            <div class="label">초기 + 월 비용</div>
-            <div class="amount">초기 ₩80~150만 · 월 ₩2~8만</div>
-            <div class="note">장비 1회 투자 + 전기·도메인·오프사이트 백업</div>
+            <div class="label">초기 CAPEX + 매월 OPEX</div>
+            <div class="amount">초기 ₩95~160만 · 월 ₩3~8만</div>
+            <div class="note">장비 1회 + 전기·백업 (상세 → <a href="#hw" style="color:var(--brand);font-weight:700">HW</a>)</div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- HW Spec -->
+    <section id="hw">
+      <div class="sec-head">
+        <h2><span class="sec-num">05</span> 하드웨어 · 인스턴스 스펙</h2>
+        <p class="sec-desc">소규모 인트라넷·CRM 기준 권장 사양 (2026 대략치)</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="spec-head">
+            <h3>Plan A · 클라우드 스펙</h3>
+            <span class="pill-tag pill-a">월 과금 · 가상 HW</span>
+          </div>
+          <table class="spec-table">
+            <tr>
+              <th>리전</th>
+              <td class="hl">AWS ap-northeast-2 (서울) 또는 NCP KR</td>
+            </tr>
+            <tr>
+              <th>App 서버</th>
+              <td>
+                <span class="hl">2 vCPU · 4 GB RAM · 80~160 GB SSD</span><br />
+                예: Lightsail $10~20 / EC2 t3.small~t3.medium / NCP s2-g2 / Standard
+              </td>
+            </tr>
+            <tr>
+              <th>관리형 DB</th>
+              <td>
+                <span class="hl">PostgreSQL 16 · 2 vCPU · 4 GB · 50~100 GB GP SSD</span><br />
+                예: RDS db.t4g.medium 소형 / NCP Cloud DB for PostgreSQL 입문형<br />
+                스토리지 암호화 ON · 자동 백업 7~14일 · Multi-AZ는 초기엔 OFF 가능
+              </td>
+            </tr>
+            <tr>
+              <th>Object Storage</th>
+              <td>
+                <span class="hl">50~200 GB</span> (계약서·증빙·리뷰 미디어)<br />
+                S3 Standard 또는 NCP Object Storage · 버전관리 권장
+              </td>
+            </tr>
+            <tr>
+              <th>네트워크</th>
+              <td>
+                아웃바운드 트래픽 월 50~200 GB 가정<br />
+                Cloudflare (DNS/프록시) 무료 플랜으로 TLS·캐시
+              </td>
+            </tr>
+            <tr>
+              <th>권장 OS / 런타임</th>
+              <td>Ubuntu 24.04 LTS · Docker Engine + Compose · Node 20 LTS</td>
+            </tr>
+            <tr>
+              <th>성장 시 업그레이드</th>
+              <td>
+                App → 4 vCPU / 8 GB · DB → 4 vCPU / 8~16 GB · Redis 추가<br />
+                트래픽·동시 접속 늘면 먼저 DB 메모리부터
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="spec-head">
+            <h3>Plan B · 물리 미니서버 스펙</h3>
+            <span class="pill-tag pill-b">1회 구매 · 사무실 상주</span>
+          </div>
+          <table class="spec-table">
+            <tr>
+              <th>본체 (권장)</th>
+              <td>
+                <span class="hl">미니 PC / NUC급 1대</span><br />
+                CPU: Intel i5 12세대+ 또는 Ryzen 5 5000+ (6코어 이상)<br />
+                예: 미니PC 완제품, 중고 워크스테이션 소형
+              </td>
+            </tr>
+            <tr>
+              <th>메모리</th>
+              <td><span class="hl">32 GB DDR4/5</span> (최소 16 GB, 여유 위해 32 GB 권장)<br />Proxmox + PG + App 동시 운용 기준</td>
+            </tr>
+            <tr>
+              <th>스토리지</th>
+              <td>
+                <span class="hl">NVMe SSD 1 TB</span> (시스템·DB·앱)<br />
+                가능 시 <span class="hl">추가 SATA/NVMe 1 TB</span> 미러 또는 백업 디스크<br />
+                (RAID1 또는 일 단위 rsync)
+              </td>
+            </tr>
+            <tr>
+              <th>UPS</th>
+              <td>
+                <span class="hl">600~1000 VA</span> 온라인/라인인터랙티브<br />
+                정전 시 안전 종료 5~15분 확보 (필수)
+              </td>
+            </tr>
+            <tr>
+              <th>네트워크</th>
+              <td>
+                유선 1 GbE · 공유기 포트 고정<br />
+                공인 IP 직접 개방 금지 → <span class="hl">Tailscale + Cloudflare Tunnel</span>
+              </td>
+            </tr>
+            <tr>
+              <th>하이퍼바이저</th>
+              <td>Proxmox VE (무료) · LXC/VM 분리<br />Guest: Ubuntu + Docker Compose 스택</td>
+            </tr>
+            <tr>
+              <th>전원 · 소음</th>
+              <td>
+                대기 소비 전력 대략 <span class="hl">30~60 W</span> (부하 시 80 W+)<br />
+                사무실 상주 가능한 저소음 모델 권장 · 잠금 가능한 위치
+              </td>
+            </tr>
+            <tr>
+              <th>오프사이트 백업</th>
+              <td>
+                암호화 후 S3 / Backblaze B2 / NCP Object<br />
+                용량 100~300 GB 가정 · 일 1회
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="spec-head">
+          <h3>Plan B · 초기 장비 견적 예시 (1회 CAPEX)</h3>
+          <span class="pill-tag pill-capex">구매 비용</span>
+        </div>
+        <div class="table-wrap" style="box-shadow:none;border:1px solid var(--line)">
+          <table class="cost-matrix">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>스펙 요약</th>
+                <th>수량</th>
+                <th>예상 금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>미니 PC 본체</td>
+                <td>i5/R5급 · 32 GB · NVMe 1 TB 포함 또는 조립</td>
+                <td>1</td>
+                <td class="num">₩55만 ~ ₩95만</td>
+              </tr>
+              <tr>
+                <td>추가 SSD (선택)</td>
+                <td>1 TB SATA/NVMe · 백업·미러용</td>
+                <td>0~1</td>
+                <td class="num">₩0 ~ ₩12만</td>
+              </tr>
+              <tr>
+                <td>UPS</td>
+                <td>600~1000 VA</td>
+                <td>1</td>
+                <td class="num">₩8만 ~ ₩18만</td>
+              </tr>
+              <tr>
+                <td>케이블 · 주변</td>
+                <td>LAN · 전원 정리 · (선택) 잠금 브라켓</td>
+                <td>—</td>
+                <td class="num">₩2만 ~ ₩5만</td>
+              </tr>
+              <tr>
+                <td>예비 여유</td>
+                <td>RAM 업그레이드 · 급발주 등</td>
+                <td>—</td>
+                <td class="num">₩5만 ~ ₩15만</td>
+              </tr>
+              <tr class="sum">
+                <td colspan="3">초기 CAPEX 합계 (대략)</td>
+                <td class="num">₩70만 ~ ₩145만<br /><span style="font-size:12px;font-weight:600;color:var(--muted)">실무 버퍼 포함 시 ₩95~160만 권장 예산</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tco-note">※ 2026 한국 소매·온라인 시세 기준 대략치. 브랜드·중고 여부에 따라 ±30% 변동 가능.</p>
+      </div>
+    </section>
+
+    <!-- Cost detail -->
+    <section id="cost">
+      <div class="sec-head">
+        <h2><span class="sec-num">06</span> 비용 상세 · 초기 vs 매월 비교</h2>
+        <p class="sec-desc">CAPEX(초기)와 OPEX(매월)를 나눠 비교</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="spec-head">
+            <h3>Plan A · 매월 나가는 비용 (OPEX)</h3>
+            <span class="pill-tag pill-opex">매월</span>
+          </div>
+          <div class="table-wrap" style="box-shadow:none;border:1px solid var(--line)">
+            <table class="cost-matrix" style="min-width:0">
+              <thead>
+                <tr><th>항목</th><th>내용</th><th>월 예상</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>App 서버</td>
+                  <td>2 vCPU / 4 GB · 고정 요금 패키지</td>
+                  <td class="num">₩1.5만 ~ ₩4만</td>
+                </tr>
+                <tr>
+                  <td>관리형 PostgreSQL</td>
+                  <td>2 vCPU / 4 GB · 50~100 GB · 백업 포함</td>
+                  <td class="num">₩6만 ~ ₩12만</td>
+                </tr>
+                <tr>
+                  <td>Object Storage</td>
+                  <td>50~200 GB + 소량 API</td>
+                  <td class="num">₩0.3만 ~ ₩2만</td>
+                </tr>
+                <tr>
+                  <td>트래픽 · 기타</td>
+                  <td>이그레스 · 스냅샷 · IP</td>
+                  <td class="num">₩0.5만 ~ ₩3만</td>
+                </tr>
+                <tr>
+                  <td>도메인 · DNS</td>
+                  <td>도메인 연 단위 환산 + CF 무료</td>
+                  <td class="num">₩0.2만 ~ ₩0.5만</td>
+                </tr>
+                <tr>
+                  <td>모니터링 (선택)</td>
+                  <td>셀프호스트면 0 · SaaS면 소액</td>
+                  <td class="num">₩0 ~ ₩1만</td>
+                </tr>
+                <tr class="sum">
+                  <td colspan="2">월 합계 (표준)</td>
+                  <td class="num">₩12만 ~ ₩22만</td>
+                </tr>
+                <tr class="sum">
+                  <td colspan="2">초기 CAPEX</td>
+                  <td class="num">≈ ₩0<br /><span style="font-size:12px;font-weight:600;color:var(--muted)">(계정 생성만, 장비 구매 없음)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="spec-head">
+            <h3>Plan B · 초기 + 매월 비용</h3>
+            <span class="pill-tag pill-capex">초기</span>
+            <span class="pill-tag pill-opex">매월</span>
+          </div>
+          <div class="table-wrap" style="box-shadow:none;border:1px solid var(--line);margin-bottom:12px">
+            <table class="cost-matrix" style="min-width:0">
+              <thead>
+                <tr><th colspan="2">① 초기 CAPEX (1회)</th><th>금액</th></tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="2">미니 PC + 메모리/SSD</td><td class="num">₩55만 ~ ₩95만</td></tr>
+                <tr><td colspan="2">UPS + 케이블·여유</td><td class="num">₩15만 ~ ₩35만</td></tr>
+                <tr><td colspan="2">추가 디스크 (선택)</td><td class="num">₩0 ~ ₩12만</td></tr>
+                <tr class="sum"><td colspan="2">초기 합계</td><td class="num">₩70만 ~ ₩145만<br />(예산 ₩95~160만)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap" style="box-shadow:none;border:1px solid var(--line)">
+            <table class="cost-matrix" style="min-width:0">
+              <thead>
+                <tr><th>② 매월 OPEX</th><th>내용</th><th>월 예상</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>전기</td>
+                  <td>30~60 W × 24h · 요금 단가 가정</td>
+                  <td class="num">₩1만 ~ ₩2.5만</td>
+                </tr>
+                <tr>
+                  <td>오프사이트 백업</td>
+                  <td>100~300 GB 오브젝트 스토리지</td>
+                  <td class="num">₩0.5만 ~ ₩2만</td>
+                </tr>
+                <tr>
+                  <td>도메인 · DNS</td>
+                  <td>연 단위 환산</td>
+                  <td class="num">₩0.2만 ~ ₩0.5만</td>
+                </tr>
+                <tr>
+                  <td>기타</td>
+                  <td>소모품 · 급발주 예비 (평균화)</td>
+                  <td class="num">₩0.5만 ~ ₩3만</td>
+                </tr>
+                <tr class="sum">
+                  <td colspan="2">월 합계</td>
+                  <td class="num">₩3만 ~ ₩8만</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TCO comparison -->
+      <div class="glass viz" style="margin-top:16px">
+        <div class="viz-title">총소유비용 (TCO) 비교 — 초기 + 누적 월 비용</div>
+        <p style="font-size:13px;color:var(--ink-soft);margin-bottom:14px;font-weight:500">
+          중간값 가정: Plan A 월 <strong>₩17만</strong> · Plan B 초기 <strong>₩120만</strong> + 월 <strong>₩5만</strong>
+        </p>
+        <div class="tco-bars">
+          <div class="tco-row">
+            <div class="lbl"><span>1년 차 TCO</span><span>A ≈ ₩204만 · B ≈ ₩180만</span></div>
+            <div class="tco-track" title="Plan A">
+              <div class="tco-seg opex" style="width:100%">A 월×12 · ₩204만</div>
+            </div>
+            <div class="tco-track" style="margin-top:6px" title="Plan B">
+              <div class="tco-seg capex" style="width:67%">초기 120</div>
+              <div class="tco-seg opex-b" style="width:33%">월×12</div>
+            </div>
+          </div>
+          <div class="tco-row">
+            <div class="lbl"><span>2년 차 TCO (누적)</span><span>A ≈ ₩408만 · B ≈ ₩240만</span></div>
+            <div class="tco-track">
+              <div class="tco-seg opex" style="width:100%">A · ₩408만</div>
+            </div>
+            <div class="tco-track" style="margin-top:6px">
+              <div class="tco-seg capex" style="width:50%">초기 120</div>
+              <div class="tco-seg opex-b" style="width:50%">월×24 · 누적 240</div>
+            </div>
+          </div>
+          <div class="tco-row">
+            <div class="lbl"><span>3년 차 TCO (누적)</span><span>A ≈ ₩612만 · B ≈ ₩300만</span></div>
+            <div class="tco-track">
+              <div class="tco-seg opex" style="width:100%">A · ₩612만</div>
+            </div>
+            <div class="tco-track" style="margin-top:6px">
+              <div class="tco-seg capex" style="width:40%">초기</div>
+              <div class="tco-seg opex-b" style="width:60%">월×36 · 누적 300</div>
+            </div>
+          </div>
+        </div>
+        <div class="tco-legend">
+          <span><i style="background:#d97706"></i>Plan B 초기 CAPEX</span>
+          <span><i style="background:#6B3FA0"></i>Plan A 월 OPEX 누적</span>
+          <span><i style="background:#0d9488"></i>Plan B 월 OPEX 누적</span>
+        </div>
+
+        <div class="tco-grid">
+          <div class="tco-card">
+            <div class="period">12개월</div>
+            <div class="vals">
+              <div class="v-box a"><div class="v-label">Plan A</div><div class="v-amt">≈ 204만</div></div>
+              <div class="v-box b"><div class="v-label">Plan B</div><div class="v-amt">≈ 180만</div></div>
+            </div>
+          </div>
+          <div class="tco-card">
+            <div class="period">24개월</div>
+            <div class="vals">
+              <div class="v-box a"><div class="v-label">Plan A</div><div class="v-amt">≈ 408만</div></div>
+              <div class="v-box b"><div class="v-label">Plan B</div><div class="v-amt">≈ 240만</div></div>
+            </div>
+          </div>
+          <div class="tco-card">
+            <div class="period">36개월</div>
+            <div class="vals">
+              <div class="v-box a"><div class="v-label">Plan A</div><div class="v-amt">≈ 612만</div></div>
+              <div class="v-box b"><div class="v-label">Plan B</div><div class="v-amt">≈ 300만</div></div>
+            </div>
+          </div>
+        </div>
+        <p class="tco-note">
+          손익 분기 대략 <strong>8~14개월</strong> 전후 — 그 이전은 A가 현금 부담 완만, 그 이후는 B 누적비가 유리한 경우가 많음.
+          다만 B는 인건비·장애 대응 시간(숨은 비용)이 포함되지 않음. 운영 인력이 없으면 A가 실질 총비용에서 유리할 수 있음.
+        </p>
+      </div>
+
+      <div class="table-wrap" style="margin-top:16px">
+        <table>
+          <thead>
+            <tr>
+              <th>비교 축</th>
+              <th>Plan A (클라우드)</th>
+              <th>Plan B (미니서버)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>초기 지출</td>
+              <td>거의 없음 (≈ 0)</td>
+              <td>장비 1회 ₩95~160만 예산</td>
+            </tr>
+            <tr>
+              <td>매월 지출</td>
+              <td>₩12~22만 (고정+사용량)</td>
+              <td>₩3~8만 (전기+백업+도메인)</td>
+            </tr>
+            <tr>
+              <td>비용 성격</td>
+              <td>OPEX 중심 · 예측 가능</td>
+              <td>CAPEX 큼 + OPEX 작음</td>
+            </tr>
+            <tr>
+              <td>스펙 변경</td>
+              <td>클릭으로 스케일 업/다운</td>
+              <td>부품 교체·추가 구매</td>
+            </tr>
+            <tr>
+              <td>장애 시 비용</td>
+              <td>클라우드 책임 범위 넓음</td>
+              <td>HW 교체·출장·다운타임 본인 부담</td>
+            </tr>
+            <tr>
+              <td>추천 상황</td>
+              <td>빠른 시작 · 운영 인력 최소</td>
+              <td>장기 운영 · 월비 절감 · 물리 통제</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <!-- 05 Architecture detail -->
     <section id="arch">
       <div class="sec-head">
-        <h2><span class="sec-num">05</span> 논리 아키텍처 · DB 스키마</h2>
+        <h2><span class="sec-num">07</span> 논리 아키텍처 · DB 스키마</h2>
         <p class="sec-desc">공통 골격 — 배치 위치만 A/B로 다름</p>
       </div>
 
@@ -1044,7 +1549,7 @@
     <!-- 06 Compare table -->
     <section id="compare">
       <div class="sec-head">
-        <h2><span class="sec-num">06</span> Plan A vs B 상세 비교</h2>
+        <h2><span class="sec-num">08</span> Plan A vs B 상세 비교</h2>
         <p class="sec-desc">의사결정 체크리스트</p>
       </div>
       <div class="table-wrap">
@@ -1075,7 +1580,7 @@
     <!-- 07 Security -->
     <section id="security">
       <div class="sec-head">
-        <h2><span class="sec-num">07</span> 보안 · 개인정보 최소 기준</h2>
+        <h2><span class="sec-num">09</span> 보안 · 개인정보 최소 기준</h2>
         <p class="sec-desc">소규모여도 빠지면 안 되는 체크리스트</p>
       </div>
       <div class="sec-list">
@@ -1100,7 +1605,7 @@
     <!-- 08 Stack -->
     <section id="stack">
       <div class="sec-head">
-        <h2><span class="sec-num">08</span> 권장 소프트웨어 스택</h2>
+        <h2><span class="sec-num">10</span> 권장 소프트웨어 스택</h2>
         <p class="sec-desc">앱·인프라 공통 조합</p>
       </div>
       <div class="grid-3">
@@ -1134,7 +1639,7 @@
     <!-- 09 Roadmap -->
     <section id="roadmap">
       <div class="sec-head">
-        <h2><span class="sec-num">09</span> 단계별 로드맵</h2>
+        <h2><span class="sec-num">11</span> 단계별 로드맵</h2>
         <p class="sec-desc">위험 순으로 단계 구축</p>
       </div>
       <div class="roadmap">
@@ -1164,7 +1669,7 @@
     <!-- 10 Decision -->
     <section id="decision">
       <div class="sec-head">
-        <h2><span class="sec-num">10</span> 최종 권고</h2>
+        <h2><span class="sec-num">12</span> 최종 권고</h2>
       </div>
       <div class="grid-2">
         <div class="card" style="border:2px solid var(--brand-mid);background:linear-gradient(180deg,rgba(245,239,251,.95),rgba(255,255,255,.8))">
@@ -1196,7 +1701,7 @@
     </section>
 
     <footer>
-      <div><strong style="color:var(--brand-deep)">언니의기록 · Happycomms</strong> · Infra Plan v1.1</div>
+      <div><strong style="color:var(--brand-deep)">언니의기록 · Happycomms</strong> · Infra Plan v1.2</div>
       <div><a href="../index.html" style="color:var(--brand);font-weight:700">← 선택 허브</a> · <a href="../service.html" style="color:var(--brand);font-weight:700">서비스</a></div>
       <div>2026 · 기술 제안용 (견적·법률 자문 아님)</div>
     </footer>
