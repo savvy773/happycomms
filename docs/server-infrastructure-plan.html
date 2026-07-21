@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>서버·인프라 기술 플랜 | 언니의기록</title>
-  <meta name="description" content="4인 스타트업용 서버·인트라넷 구축 Plan A/B 기술 문서 — 아키텍처, 비용, 보안 시각화" />
+  <meta name="description" content="소규모 스타트업용 서버·인트라넷 구축 Plan A/B 기술 문서 — 아키텍처, 비용, 보안 시각화" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236B3FA0'/%3E%3Ctext x='16' y='20.5' text-anchor='middle' fill='white' font-size='9' font-family='system-ui' font-weight='700'%3E행복%3C/text%3E%3C/svg%3E" />
@@ -542,10 +542,10 @@
       <h1>소규모 스타트업을 위한<br />서버 · 인트라넷 구축 기술 플랜</h1>
       <p>
         SNS 체험단 플랫폼 <strong>언니의기록</strong> — 고객·인플루언서·매출·사내 데이터를
-        4인이 안전하게 운영하기 위한 <strong>Plan A / Plan B</strong> 기술 문서입니다.
+        안전하게 운영하기 위한 <strong>Plan A / Plan B</strong> 기술 문서입니다.
       </p>
       <div class="hero-meta">
-        <span class="chip">4인 팀</span>
+        <span class="chip">소규모 스타트업</span>
         <span class="chip">SNS 체험단</span>
         <span class="chip">개인정보 포함</span>
         <span class="chip">사내 인트라넷</span>
@@ -566,7 +566,7 @@
             <li><strong>서비스</strong> — SNS 체험단 / 라이프스타일 리뷰</li>
             <li><strong>브랜드</strong> — 언니의기록</li>
             <li><strong>도메인</strong> — unnigirok.com</li>
-            <li><strong>조직</strong> — 약 4인 (DevOps 전담 없음 가정)</li>
+            <li><strong>조직</strong> — 소규모 팀 (DevOps 전담 없음 가정)</li>
           </ul>
         </div>
         <div class="card">
@@ -584,7 +584,7 @@
         <div>
           <strong>핵심 원칙</strong>
           <p>
-            4인 팀에서는 관리형 서비스 + 자동화 백업 + 최소 권한이 유리합니다.
+            소규모 팀에서는 관리형 서비스 + 자동화 백업 + 최소 권한이 유리합니다.
             <strong>Plan A</strong>가 1순위, <strong>Plan B</strong>는 데이터 주권·월 고정비 최소화 대안입니다.
           </p>
         </div>
@@ -745,7 +745,7 @@
         <div class="layers">
           <div class="layer">
             <div class="layer-tag l1">Clients</div>
-            <div class="body">직원 4인 · 관리자 · (선택) 인플루언서 포털<span>브라우저 · MFA · VPN</span></div>
+            <div class="body">직원 · 관리자 · (선택) 인플루언서 포털<span>브라우저 · MFA · VPN</span></div>
           </div>
           <div class="layer">
             <div class="layer-tag l2">Edge</div>
@@ -893,7 +893,7 @@
           <div class="score-cell"><div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></div>
           <div class="score-cell"><div class="dots"><span class="dot on b"></span><span class="dot on b"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>
 
-          <div class="score-cell row-label">4인 팀 추천도</div>
+          <div class="score-cell row-label">소규모 팀 추천도</div>
           <div class="score-cell"><div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div></div>
           <div class="score-cell"><div class="dots"><span class="dot on b"></span><span class="dot on b"></span><span class="dot on b"></span><span class="dot"></span><span class="dot"></span></div></div>
         </div>
@@ -904,7 +904,7 @@
     <section id="plans">
       <div class="sec-head">
         <h2><span class="sec-num">04</span> 추천 조합 — Plan A / B</h2>
-        <p class="sec-desc">4인 팀 기준 기술 스택</p>
+        <p class="sec-desc">소규모 팀 기준 기술 스택</p>
       </div>
       <div class="grid-2">
         <article class="card plan recommended">
@@ -1058,7 +1058,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>4인 운영 난이도</td><td>낮음</td><td>중~높음</td><td><span class="badge badge-a">A</span></td></tr>
+            <tr><td>소규모 운영 난이도</td><td>낮음</td><td>중~높음</td><td><span class="badge badge-a">A</span></td></tr>
             <tr><td>초기 투자</td><td>거의 없음</td><td>장비 80~150만</td><td><span class="badge badge-a">A</span></td></tr>
             <tr><td>월 고정 비용</td><td>8~25만+</td><td>2~8만</td><td><span class="badge badge-b">B</span></td></tr>
             <tr><td>가용성·정전</td><td>클라우드 SLA</td><td>UPS·본인 대응</td><td><span class="badge badge-a">A</span></td></tr>
