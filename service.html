@@ -42,22 +42,36 @@
     html {
       scroll-behavior: smooth;
       scrollbar-width: thin;
-      scrollbar-color: color-mix(in srgb, var(--brand-mid) 70%, white) transparent;
+      scrollbar-color: #A78BDB #F0E8F8;
     }
-    ::-webkit-scrollbar { width: 10px; height: 10px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb {
-      background: color-mix(in srgb, var(--brand-soft) 75%, var(--brand));
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar,
+    *::-webkit-scrollbar { width: 11px; height: 11px; }
+    html::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track,
+    *::-webkit-scrollbar-track {
+      background: #F0E8F8;
       border-radius: 999px;
-      border: 2px solid transparent;
+    }
+    html::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb,
+    *::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #B794F0, #6B3FA0);
+      border-radius: 999px;
+      border: 2px solid #F0E8F8;
+      background-clip: padding-box;
+      min-height: 40px;
+    }
+    html::-webkit-scrollbar-thumb:hover,
+    body::-webkit-scrollbar-thumb:hover,
+    *::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #8B5FC7, #4A2475);
+      border: 2px solid #F0E8F8;
       background-clip: padding-box;
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, var(--brand-mid), var(--brand-deep));
-      border: 2px solid transparent;
-      background-clip: padding-box;
-    }
-    ::-webkit-scrollbar-corner { background: transparent; }
+    html::-webkit-scrollbar-corner,
+    body::-webkit-scrollbar-corner,
+    *::-webkit-scrollbar-corner { background: transparent; }
 
     body {
       font-family: var(--font);
