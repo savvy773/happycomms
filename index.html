@@ -690,6 +690,49 @@
       line-height: 1.55;
     }
 
+    /* ===== Tech docs promo ===== */
+    .docs-panel {
+      padding: 40px 40px 32px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.7) 0%, rgba(237, 228, 245, 0.55) 100%),
+        radial-gradient(ellipse at 100% 0%, rgba(139, 95, 199, 0.15), transparent 55%);
+    }
+    .docs-panel-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .docs-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .docs-tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+    .docs-tags li {
+      font-size: 12.5px;
+      font-weight: 650;
+      color: var(--brand-deep);
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid var(--line);
+      padding: 7px 14px;
+      border-radius: 999px;
+    }
+    @media (max-width: 560px) {
+      .docs-panel { padding: 28px 20px; }
+    }
+
     /* ===== CTA ===== */
     .cta-wrap { padding: 0 0 88px; }
     .cta {
@@ -846,6 +889,7 @@
         <a class="hide-m" href="#service">서비스</a>
         <a class="hide-m" href="#category">카테고리</a>
         <a class="hide-m" href="#process">프로세스</a>
+        <a href="docs/server-infrastructure-plan.html">기술문서</a>
         <a class="btn btn-primary btn-nav" href="#contact">문의하기</a>
       </div>
     </div>
@@ -1044,6 +1088,33 @@
           <h3>리포트 · 정산</h3>
           <p>게시 결과 확인 후 정산·리포팅으로 캠페인을 마무리합니다.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="docs">
+    <div class="wrap">
+      <div class="glass docs-panel">
+        <div class="docs-panel-inner">
+          <div>
+            <div class="sec-label">Technical</div>
+            <h2 class="sec-title" style="margin-bottom: 10px;">서버 · 인프라 기술 플랜</h2>
+            <p class="sec-desc" style="margin-bottom: 0;">
+              4인 스타트업용 고객·인플루언서·매출·인트라넷 데이터 서버 구축
+              <strong>Plan A / Plan B</strong> 기술 문서입니다.
+            </p>
+          </div>
+          <div class="docs-actions">
+            <a class="btn btn-primary" href="docs/server-infrastructure-plan.html">기술 문서 열기</a>
+            <a class="btn btn-glass" href="docs/server-infrastructure-plan.html#plans">Plan A / B 바로가기</a>
+          </div>
+        </div>
+        <ul class="docs-tags">
+          <li>관리형 클라우드</li>
+          <li>미니서버 하이브리드</li>
+          <li>개인정보 · 매출 보안</li>
+          <li>사내 인트라넷</li>
+        </ul>
       </div>
     </div>
   </section>
