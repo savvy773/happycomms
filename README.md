@@ -1,7 +1,7 @@
-# 언니의기록 · Portfolio by Juns
+# ㅇㅇ의 리뷰 · Portfolio by Juns
 
 **Juns** 개인 포트폴리오용 정적 웹 프로젝트입니다.  
-SNS 체험단 · 라이프스타일 리뷰 플랫폼 콘셉트(**언니의기록**)의 랜딩 + 서버·인프라 기술 문서를 담았습니다.
+SNS 체험단 · 라이프스타일 리뷰 플랫폼 콘셉트(**ㅇㅇ의 리뷰**)의 랜딩 + 서버·인프라 기술 문서를 담았습니다.
 
 > **데모 / 샘플 프로젝트** — 실제 운영 서비스가 아닙니다.  
 > 도메인·이메일·전화 등 연락처는 모두 **example / 123** 형태의 가짜 값입니다.
@@ -44,7 +44,7 @@ happycomms/
 
 ## Service concept (`service.html`)
 
-- Tagline: *언니의 시선으로 좋은 경험을 기록합니다*
+- Tagline: *ㅇㅇ의 시선으로 좋은 경험을 리뷰합니다*
 - Categories: food, travel, stay, **hospital/clinic**, beauty, home, café, fashion, kids, fitness, pets, etc.
 - Campaign · creator matching · content ops (concept copy)
 
