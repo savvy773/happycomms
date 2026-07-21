@@ -9,7 +9,8 @@ SNS 체험단 · 라이프스타일 리뷰 플랫폼 **언니의기록** 랜딩 
 
 | 경로 | 설명 |
 |------|------|
-| `index.html` | 랜딩 페이지 |
+| `index.html` | 진입 허브 — 2개 선택 (서비스 / 기술문서) |
+| `service.html` | 브랜드 · 서비스 소개 랜딩 |
 | `docs/server-infrastructure-plan.html` | 서버·인프라 기술 플랜 (Plan A/B) |
 
 ## GitHub Pages
